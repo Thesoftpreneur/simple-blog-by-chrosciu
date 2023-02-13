@@ -1,4 +1,4 @@
-package com.chrosciu.cli.action;
+package org.example.cli.action;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

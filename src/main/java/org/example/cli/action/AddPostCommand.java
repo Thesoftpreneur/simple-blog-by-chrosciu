@@ -1,7 +1,7 @@
-package com.chrosciu.cli.action;
+package org.example.cli.action;
 
-import com.chrosciu.post.service.PostService;
-import com.chrosciu.post.transfer.NewPostDto;
+import org.example.post.service.PostService;
+import org.example.post.transfer.NewPostDto;
 import java.util.Scanner;
 
 public class AddPostCommand implements Command {

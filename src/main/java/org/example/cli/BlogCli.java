@@ -1,12 +1,12 @@
-package com.chrosciu.cli;
+package org.example.cli;
 
-import static com.chrosciu.cli.action.Action.NO_OP;
-
-import com.chrosciu.cli.action.Action;
-import com.chrosciu.post.service.PostService;
+import org.example.cli.action.Action;
+import org.example.post.service.PostService;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -16,7 +16,7 @@ public class BlogCli {
     private final List<String> labels = Arrays.stream(Action.values())
         .filter(a -> a.getCode() != null)
         .map(a -> String.format("%d - %s", a.getCode(), a))
-        .toList();
+        .collect(Collectors.toList());
 
     public void run() {
         System.out.println("*** Welcome to Blog application ***");
@@ -32,7 +32,7 @@ public class BlogCli {
                 var action = Arrays.stream(Action.values())
                     .filter(a -> code == a.getCode())
                     .findFirst()
-                    .orElse(NO_OP);
+                    .orElse(Action.NO_OP);
                 action.getCommand().execute(postService, scanner);
                 if (action.isTerminal()) {
                     break;

@@ -1,8 +1,9 @@
-package com.chrosciu;
+package org.example;
 
-import com.chrosciu.cli.BlogCli;
-import com.chrosciu.post.model.Post;
-import com.chrosciu.post.service.PostService;
+import org.example.cli.BlogCli;
+import org.example.post.model.Post;
+import org.example.post.service.PostService;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

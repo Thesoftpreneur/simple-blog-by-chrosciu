@@ -1,4 +1,4 @@
-package com.chrosciu.post.exception;
+package org.example.post.exception;
 
 public class PostException extends RuntimeException {
     public PostException(String message) {

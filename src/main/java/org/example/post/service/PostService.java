@@ -1,12 +1,14 @@
-package com.chrosciu.post.service;
+package org.example.post.service;
 
-import com.chrosciu.post.exception.PostException;
-import com.chrosciu.post.model.Post;
-import com.chrosciu.post.transfer.NewPostDto;
-import com.chrosciu.post.transfer.PostContentDto;
-import com.chrosciu.post.transfer.ShortPostDto;
+import org.example.post.exception.PostException;
+import org.example.post.model.Post;
+import org.example.post.transfer.NewPostDto;
+import org.example.post.transfer.PostContentDto;
+import org.example.post.transfer.ShortPostDto;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -16,14 +18,14 @@ public class PostService {
     public List<ShortPostDto> getAllPosts() {
         return posts.stream()
             .map(post -> new ShortPostDto(post.getId(), post.getTitle()))
-            .toList();
+            .collect(Collectors.toList());
     }
 
     public List<ShortPostDto> searchPosts(String query) {
         return posts.stream()
             .filter(post -> post.getTitle().contains(query) || post.getContent().contains(query))
             .map(post -> new ShortPostDto(post.getId(), post.getTitle()))
-            .toList();
+            .collect(Collectors.toList());
     }
 
     public Optional<PostContentDto> getPost(int postId) {

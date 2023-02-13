@@ -1,4 +1,4 @@
-package com.chrosciu.post.model;
+package org.example.post.model;
 
 import lombok.Value;
 

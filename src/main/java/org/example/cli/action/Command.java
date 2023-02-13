@@ -1,6 +1,6 @@
-package com.chrosciu.cli.action;
+package org.example.cli.action;
 
-import com.chrosciu.post.service.PostService;
+import org.example.post.service.PostService;
 import java.util.Scanner;
 
 public interface Command {

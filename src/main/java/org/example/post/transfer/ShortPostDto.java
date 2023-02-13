@@ -1,4 +1,4 @@
-package com.chrosciu.post.transfer;
+package org.example.post.transfer;
 
 import lombok.Value;
 
