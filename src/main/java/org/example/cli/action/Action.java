@@ -10,6 +10,7 @@ public enum Action {
     SEARCH_POSTS(2, new SearchPostsCommand(), false),
     SHOW_POST_CONTENT(3, new ShowPostContentCommand(), false),
     ADD_POST(4, new AddPostCommand(), false),
+    REMOVE_POST(5, new RemovePostCommand(), false),
     EXIT_APPLICATION(0, new ExitApplicationCommand(), false),
     NO_OP(null, new NoOpCommand(), false);
 

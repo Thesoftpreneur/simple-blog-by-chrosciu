@@ -44,4 +44,9 @@ public class PostService {
         posts.add(new Post(newId, newPostDto.getTitle(), newPostDto.getContent()));
         return newId;
     }
+
+    public void removePost(int index) {
+        posts.remove(index);
+
+    }
 }

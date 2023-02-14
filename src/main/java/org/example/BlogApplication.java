@@ -14,6 +14,16 @@ public class BlogApplication {
         var postService = new PostService(posts);
         var scanner = new Scanner(System.in);
         scanner.useDelimiter("\\n");
+
+//        postService.addPost(new org.example.post.transfer.NewPostDto(
+//            "Debugger sucks",
+//            "I cannot find any bug in my app, give me something better !")
+//        );
+//        postService.addPost(new org.example.post.transfer.NewPostDto(
+//            "Sneaky streams",
+//            "What really happens in this inferno ?")
+//        );
+
         var blogCli = new BlogCli(postService, scanner);
 
         blogCli.run();
